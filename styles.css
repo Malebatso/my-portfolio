@@ -1,0 +1,155 @@
+:root {
+  --primary: #000000;
+  --bg: #ffffff;
+  --text: #100f0f;
+  --secondary: #dc2626;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--primary);
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.brand h1 { margin: 0; font-size: 1.5rem; }
+.brand p { margin: .2rem 0 0; font-size: .85rem; }
+
+nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: .95rem;
+  transition: all .2s ease;
+}
+nav a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+main { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+section { margin-bottom: 3rem; }
+h3 { color: var(--secondary); font-size: 2rem; }
+
+.about {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.about h2 { color: var(--secondary); font-size: 2rem; margin: 0 0 .75rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.icon { font-size: 1.5rem; }
+
+#projects ul { list-style: none; padding: 0; }
+#projects li { border-bottom: 1px solid #d1d5db; padding: .7rem 0; }
+#projects h4 { margin: 0 0 .4rem; }
+
+.recommendation-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .8rem;
+}
+blockquote {
+  margin: 0;
+  background: white;
+  padding: .8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+.form-wrap input, .form-wrap textarea {
+  width: 100%;
+  margin-bottom: .6rem;
+  padding: .5rem;
+}
+.form-wrap button {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: .55rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-icon {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: grid;
+  place-items: center;
+}
+.popup-content {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.hidden { display: none; }
+
+
+.social-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem 2rem;
+}
+
+.social-footer a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 1.35rem;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.social-footer a:hover {
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
